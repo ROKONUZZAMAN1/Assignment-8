@@ -2,13 +2,15 @@ import React from 'react';
 import { useProducts } from '../../Hook/useProducts';
 import SkeletonLoader from '../../SkeletonLoader/SkeletonLoader';
 import Cards from './Cards';
+import { NavLink } from 'react-router';
+import Apps from '../Home/Apps';
 
 
 const HomeData = () => {
 
     const { products, loading, error } = useProducts()
     const Homedata = products.slice(0, 8)
-    console.log(Homedata)
+    // console.log(Homedata)
 
     return (
 
@@ -27,6 +29,7 @@ const HomeData = () => {
                 </div>
             </div>
 
+
             {loading ? (
                 <SkeletonLoader />
             ) : (
@@ -37,7 +40,9 @@ const HomeData = () => {
                 </div>
             )}
 
-
+            <div className='flex justify-center items-center mx-auto ' >
+                <NavLink to={'/apps'}> <button className='btn my-10 bg-[#9F62F2] text-white '>Show All</button></NavLink>
+            </div>
         </div>
     );
 };
