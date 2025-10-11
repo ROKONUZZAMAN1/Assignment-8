@@ -4,13 +4,13 @@ import App from '../../assets/AppStore.png'
 import hero from '../../assets/hero.png'
 import facts from '../../assets/Facts.png';
 import HomeData from '../HomeComponent/HomeData';
-import { useLoaderData } from 'react-router';
 
 
 
 const Home = () => {
-    const products = useLoaderData()
-    console.log(products)
+
+    // const products = useLoaderData()
+    // console.log(products)
     return (
         <div className='bg-base-200'>
             <div className="hero bg-base-200 mt-10 ">
@@ -47,13 +47,10 @@ const Home = () => {
                 <img src={facts} alt="" />
             </div>
 
-            <div>
-                {
-
-                }
-            </div>
+            <HomeData></HomeData>
 
         </div>
+
     );
 };
 

@@ -1,10 +1,14 @@
 import React from 'react';
+import { useProducts } from '../../Hook/useProducts';
+import SkeletonLoader from '../../SkeletonLoader/SkeletonLoader';
+import Cards from './Cards';
 
 
 const HomeData = () => {
 
-
-
+    const { products, loading, error } = useProducts()
+    const Homedata = products.slice(0, 8)
+    console.log(Homedata)
 
     return (
 
@@ -23,8 +27,15 @@ const HomeData = () => {
                 </div>
             </div>
 
-
-
+            {loading ? (
+                <SkeletonLoader />
+            ) : (
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+                    {Homedata.map(product => (
+                        <Cards key={product.id} product={product} />
+                    ))}
+                </div>
+            )}
 
 
         </div>
