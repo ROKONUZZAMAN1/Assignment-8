@@ -29,7 +29,7 @@ export const router = createBrowserRouter([
                 Component: Installation
             },
             {
-                path: '/AppDetails',
+                path: '/AppDetails/:id',
                 Component: AppDetails
             },
 
