@@ -20,6 +20,7 @@ const Navbar = () => {
                             </li>
                             <li><NavLink to='/apps'>Apps</NavLink></li>
                             <li><NavLink to='/installation'>Installation</NavLink></li>
+                            <li><NavLink to='/AppDetails'>AppDetails</NavLink></li>
                         </ul>
                     </div>
                     <div className='flex items-center'>
@@ -35,6 +36,7 @@ const Navbar = () => {
                         </li>
                         <li><NavLink to='/apps'>Apps</NavLink></li>
                         <li><NavLink to='/installation'>Installation</NavLink></li>
+                        <li><NavLink to='/AppDetails'>AppDetails</NavLink></li>
 
 
                     </ul>
