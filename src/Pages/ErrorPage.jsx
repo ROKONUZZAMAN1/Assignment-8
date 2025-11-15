@@ -2,13 +2,16 @@ import React from 'react';
 import Footer from '../Component/Footer';
 import Navbar from '../Component/Navbar';
 import { useRouteError } from 'react-router';
+import errorImg from '../assets/App-Error.png'
 
 const ErrorPage = () => {
     const Error = useRouteError()
     return (
-        <div>
+        <div className='flex justify-center'>
 
-            <div>{Error.message}</div>
+            <img src={errorImg} alt="" />
+
+
 
         </div>
     );

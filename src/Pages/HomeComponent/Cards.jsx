@@ -2,10 +2,10 @@ import React from 'react';
 import { NavLink } from 'react-router';
 
 const Cards = ({ product }) => {
-    const { ratingAvg, downloads, image, title } = product
+    const { ratingAvg, downloads, image, title, id } = product
     return (
         <div>
-            <NavLink to={'/AppDetails'}>
+            <NavLink to={`/AppDetails/${id}`}>
                 <div>
                     <div className="card bg-base-100  shadow-sm">
                         <figure>

@@ -15,6 +15,7 @@ const HomeData = () => {
     return (
 
         <div>
+
             <div>
                 <div className="hero bg-base-200  ">
                     <div className="hero-content text-center">
